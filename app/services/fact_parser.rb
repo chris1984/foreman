@@ -125,6 +125,11 @@ class FactParser
   def disks_total
   end
 
+  # Kernel version
+  def kernel_version
+    facts['uname.release']
+  end
+
   private
 
   def find_interface_by_name(host_name)
