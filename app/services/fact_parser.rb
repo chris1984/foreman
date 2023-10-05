@@ -109,6 +109,10 @@ class FactParser
   def virtual
   end
 
+  # amount of cpus
+  def cpus
+  end
+
   # host memory in MB
   def ram
   end
@@ -119,6 +123,10 @@ class FactParser
 
   # cores per socket
   def cores
+  end
+
+  # amount of cpus on system
+  def cpus
   end
 
   # The summed total size (in bytes) of all disks of a host or nil if unsupported

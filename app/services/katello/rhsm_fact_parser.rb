@@ -4,6 +4,7 @@ module Katello
 
   class RhsmFactParser < ::FactParser
     def architecture
+      Rails.logger.debug "TEST #{facts}"
       name = facts['lscpu.architecture'] || facts['uname.machine']
       name = "x86_64" if name == "amd64"
       name = "i386" if name == "i686"
@@ -105,7 +106,11 @@ module Katello
     end
 
     def ram
-      facts['memory.memtotal'].to_i / 1024 if facts['memory.memtotal']
+      facts['memory.memtotal']
+    end
+
+    def cpus
+      facts['cpu.cpu(s)']
     end
 
     def sockets

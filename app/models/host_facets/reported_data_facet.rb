@@ -6,6 +6,7 @@ module HostFacets
         boot_time: parser.boot_timestamp,
         virtual: parser.virtual,
         ram: parser.ram,
+        cpus: parser.cpus,
         sockets: parser.sockets,
         cores: parser.cores,
         disks_total: parser.disks_total,

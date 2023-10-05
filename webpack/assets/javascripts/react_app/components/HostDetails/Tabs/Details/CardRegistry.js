@@ -7,6 +7,7 @@ import NetworkingInterfaces from '../Details/Cards/NetworkingInterfaces';
 import TemplatesCard from '../Details/Cards/TemplatesCard';
 import ProvisioningCard from '../Details/Cards/Provisioning';
 import VirtualizationCard from '../Details/Cards/Virtualization';
+import HwPropertiesCard from '../Details/Cards/HardwareProperties';
 
 const cards = [
   { key: '[core] System properties', Component: Properties, weight: 4000 },
@@ -14,6 +15,7 @@ const cards = [
   { key: '[core] Provisioning', Component: ProvisioningCard, weight: 2900 },
   { key: '[core] BIOS', Component: Bios, weight: 2000 },
   { key: '[core] Virtualization', Component: VirtualizationCard, weight: 1000 },
+  { key: '[core] Hardware Properties', Component: HwPropertiesCard, weight: 250 },
   {
     key: '[core] Templates',
     Component: TemplatesCard,
