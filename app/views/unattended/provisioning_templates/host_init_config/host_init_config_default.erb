@@ -67,6 +67,10 @@ apt-get -y update
 
 <% end -%>
 
+<% if host_param_true?('host_registraton_insights_inventory') -%>
+echo '{"insights_inventory_enabled": "true"}' > /etc/rhsm/facts/insights-inventory.facts
+<% end -%>
+
 <% if plugin_present?('katello') -%>
 if command -v subscription-manager &>/dev/null; then
   echo "Refreshing subscription data"

@@ -82,5 +82,45 @@ exports[`RegistrationCommandsPage fields - ConfigParams renders 1`] = `
       />
     </FormSelect>
   </FormGroup>
+  <FormGroup
+    fieldId="registration_setup_insights_inventory"
+    label="Setup Insights Inventory"
+    labelIcon={
+      <LabelIcon
+        text="If set to \`Yes\`, Insights data about this host will be included in the scheduled report generation and upload or via a manual run of the action. The inherited value is based on the \`host_registraton_insights_inventory\` parameter. It can be inherited e.g. from host group, operating system, organization. When overridden, the selected value will be stored on host parameter level."
+      />
+    }
+  >
+    <FormSelect
+      className="without_select2"
+      id="registration_setup_insights_inventory"
+      isDisabled={false}
+      isIconSprite={false}
+      isRequired={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      ouiaId="registration_setup_insights_inventory"
+      ouiaSafe={true}
+      validated="default"
+      value=""
+    >
+      <FormSelectOption
+        key="0"
+        label="Inherit from host parameter (no)"
+        value=""
+      />
+      <FormSelectOption
+        key="1"
+        label="Yes (override)"
+        value={true}
+      />
+      <FormSelectOption
+        key="2"
+        label="No (override)"
+        value={false}
+      />
+    </FormSelect>
+  </FormGroup>
 </Fragment>
 `;
